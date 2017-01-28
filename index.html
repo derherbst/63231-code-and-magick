@@ -43,6 +43,9 @@
       getFireballSpeed = 5;
     } else {
       getFireballSpeed = 2;
+      return 5;
+    } else {
+      return 2;
     };
   };
 
@@ -54,6 +57,14 @@
     return width / 2 - wizardWidth / 2;
   };
   var getWizardY = function(height) {
+  	return 1.337 * wizardWidth;
+  };
+  
+  var getWizardX = function (width) {
+    return width / 2 - wizardWidth / 2;
+  };
+
+  var getWizardY = function (height) {
     return height / 3;
   };
   
