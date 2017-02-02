@@ -2,14 +2,13 @@
 
 var namesArray = ['Вы', 'Олег', 'Саша', 'Юля'];
 var timesArray = [500, 535, 700, 400];
+var histHeight = 150;
+var histX = 150;
+var colWidth = 40;
+var colBetween = 80;
+var mineColor = 'rgba(255, 0, 0, 1)';
 
 window.renderStatistics = function (ctx, names, times) {
-
-  var histHeight = 150;
-  var histX = 150;
-  var colWidth = 40;
-  var colBetween = 80;
-  var mineColor = 'rgba(255, 0, 0, 1)';
 
   ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
   ctx.fillRect(110, 20, 420, 270);
@@ -48,5 +47,6 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillRect(histX + colBetween * i, 100 + histHeight - colHeight, colWidth, colHeight);
     ctx.fillStyle = '#000';
     ctx.fillText(namesArray[i], histX + colBetween * i, 105 + histHeight);
+    ctx.fillText(timesArray[i], histX + colBetween * i, 80 + histHeight - colHeight);
   }
 };
