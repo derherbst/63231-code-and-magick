@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Георгий Гербст](https://up.htmlacademy.ru/javascript/8/user/63231).
-* Наставник: [Антон Попов] (https://up.htmlacademy.ru/javascript/8/user/78239).
+* Наставник: [Антон Попов](https://up.htmlacademy.ru/javascript/8/user/78239).
 
 ---
 
