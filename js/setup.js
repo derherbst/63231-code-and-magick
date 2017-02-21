@@ -37,26 +37,22 @@ var isActivateEvent = function (event) {
   return event.keyCode && event.keyCode === ENTER_KEY;
 };
 
+var closeSetupHandler = function (event) {
+  if (event.keyCode === ESCAPE_KEY) {
+    setup.classList.add('invisible');
+    setup.setAttribute('aria-hidden', true);
+  }
+};
+
 var showSetupElement = function () {
   setup.classList.remove('invisible');
-  document.addEventListener('keydown', function (event) {
-    if (event.keyCode === ESCAPE_KEY) {
-      setup.classList.add('invisible');
-      setup.setAttribute('aria-hidden', true);
-    }
-  });
   setupOpen.setAttribute('aria-pressed', true);
+  document.addEventListener('keydown', closeSetupHandler);
 };
 
 var hideSetupElement = function () {
   setup.classList.add('invisible');
   setup.setAttribute('aria-hidden', true);
-  document.addEventListener('keydown', function (event) {
-    if (event.keyCode === ESCAPE_KEY) {
-      setup.classList.add('invisible');
-      setup.setAttribute('aria-hidden', true);
-    }
-  });
   setupOpen.setAttribute('aria-pressed', false);
 };
 
@@ -64,6 +60,7 @@ var hideSetupElement = function () {
 buttonAtributes(setupOpen);
 buttonAtributes(setupClose);
 buttonAtributes(setupSave);
+
 
 // открытие/закрытие окна персонажа
 // открытие по клику на мышь
